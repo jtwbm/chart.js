@@ -126,9 +126,6 @@ gulp.task('watch', function(){
     watch([path.src.other], function(event, cb) {
         gulp.start('other:build');
     });
-    watch([path.src.favicons], function(event, cb) {
-        gulp.start('favicons:build');
-    });
 });
 gulp.task('webserver', function () {
     browserSync(serverConfig);
