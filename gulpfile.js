@@ -108,7 +108,7 @@ gulp.task('build', [
     'other:build',
 ]);
 gulp.task('watch', function(){
-    watch([path.src.html], function(event, cb) {
+    watch(['src/**/*.html'], function(event, cb) {
         gulp.start('html:build');
     });
     watch([path.src.style], function(event, cb) {
