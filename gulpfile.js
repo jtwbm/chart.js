@@ -137,7 +137,7 @@ gulp.task('build:clean', function (cb) {
 gulp.task('favicons:clean', function (cb) {
     rimraf(path.clean[1], cb);
 });
-gulp.task('clean', ['build:clean', 'favicons:clean']);
+gulp.task('clean', ['build:clean']);
 
 gulp.task('default', ['build', 'webserver', 'watch']);
 
