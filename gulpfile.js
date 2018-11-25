@@ -59,7 +59,7 @@ gulp.task('js:build', function () {
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(uglify())
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({stream: true}));
 });
@@ -69,7 +69,7 @@ gulp.task('style:build', function () {
         .pipe(sass())
         .pipe(prefixer())
         .pipe(cssmin({compatibility: 'ie8'}))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
